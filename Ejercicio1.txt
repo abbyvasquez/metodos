@@ -1,0 +1,6 @@
+1. Realice las 4 primeras  iteraciones para encontrar los puntos fijos de g(x)
+cuando f(x)=0
+f(x)=0.5*sin(x)-x+1 utilice X0=0. En cada iteracción calcule |Ea| y calcule la condición
+|g'(x)|<1
+
+f(x)=0.5*sin(x)-x+1 --> x=0.5*sin(x)+1

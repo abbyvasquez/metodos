@@ -1,0 +1,5 @@
+4. Utilice el mejor metodo para resolver f(x)=0 utilice X0=-4, realice 3 iteracciones.
+R// El mejor metodo para resolver f(x)=0 es el metodo de Newton-Raphson modificado porque la funcion
+tiene multiplicidad m>=2 y este nos permite seguir con una velocidad de convergencia cuadratica.
+
+x**3+2*(x**2)-4*x+8

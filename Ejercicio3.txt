@@ -1,0 +1,3 @@
+3. Seleccione con una x las opciones de respuesta correcta
+a. El metodo de Newton-Raphson modificado permite:
+R//Mantener orden de convergencia cuadratica y multiplicidad en metodos abiertos.

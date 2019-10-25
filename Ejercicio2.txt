@@ -1,0 +1,8 @@
+2. El volumen V de un liquido contenido en un tanque horizontal cilindrico de radio R
+y longitud L está relacionado con la profundidad del liquido H por:
+v=((r**2)*acos((r-h)/r)-(r-h*((2*r*h-(h**2))**(1/2))))*l
+Determine h para r=2m, l=5m y v=8,5m**3
+
+a. Use el metodo de Newton-Raphson, con el valor inicial de h=0.5 y realice las primeras 3 iteraciones
+
+v=((r**2)*acos((r-h)/r)-(r-h*((2*r*h-(h**2))**(1/2))))*l -->  0=o
