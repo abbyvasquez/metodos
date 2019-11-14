@@ -34,10 +34,10 @@ while (j<=7):
             i=i+1
  resultado=valorandonumerador/valorandodenominador
  resultadoTot=(Valor[j][1])*resultado
- print ('L(',j,')=',resultado)
+ print('L(',j,')=',resultado)
  resultadoTotalizando = resultadoTotalizando + resultadoTot
  j=j+1
- print ('F(',j-1,')=',resultadoTotalizando)
+ print('F(',j-1,')=',resultadoTotalizando)
 
 def f(x):
      return eval(resultadoTotalizando)
@@ -47,22 +47,22 @@ x=float(input('Ingrese el valor que desea reemplazar en la función: '))
 resultadoTotalizando=str(resultadoTotalizando)
 resultadoTotalizandoEvaluando = f(x)
 
-print ('F(',j-1,')=',resultadoTotalizandoEvaluando)
+print('F(',j-1,')=',resultadoTotalizandoEvaluando)
 
 ec=(sin(3*1.78))
 
-print ("El valor real, evaluado en la función original es = ",ec)
+print("El valor real, evaluado en la función original es = ",ec)
 
 Err = abs(ec-resultadoTotalizandoEvaluando)
-print ("Error relativo = ",Err)
+print("Error relativo = ",Err)
 
 Ead=Err/ec
-print ("Error absoluto proporción = ",Err)
-print ("Error absoluto porcentaje = ",abs(Ead*100), "%")
+print("Error absoluto proporción = ",Err)
+print("Error absoluto porcentaje = ",abs(Ead*100), "%")
 
-xx= (1,1.2,1.3,1.5,1.6,1.9,2,2.2)
-yy= (0.1411,-0.4425,-0.6878,-0.9775,-0.9962,-0.5507,-0.2794,0.3115)
-yy2= (0.1411000000000001,-0.44249999999999995,-0.6878000000000007,-0.9774999999999997,-0.9962,-0.5506999999999996,-0.27940000000000076,0.31150000000000067)
+xx=(1,1.2,1.3,1.5,1.6,1.9,2,2.2)
+yy=(0.1411,-0.4425,-0.6878,-0.9775,-0.9962,-0.5507,-0.2794,0.3115)
+yy2=(0.1411000000000001,-0.44249999999999995,-0.6878000000000007,-0.9774999999999997,-0.9962,-0.5506999999999996,-0.27940000000000076,0.31150000000000067)
 #yy2=
 
 plt.title('Interpolación Lagrange')
