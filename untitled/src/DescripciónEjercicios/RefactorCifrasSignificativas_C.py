@@ -1,9 +1,10 @@
 import numpy
 
+
 redondeo=int(input('Ingrese la cantidad de cifras a redondear: '))
 
 
-
+##Valores de entrada, A corresponde 'A' las filas y 'B' Corresponde a los resultados
 A00=(float(input('Ingrese la matriz 0,0:')))
 A01=(float(input('Ingrese la matriz 0,1:')))
 A02=(float(input('Ingrese la matriz 0,2:')))
@@ -19,7 +20,7 @@ B3=(float(input('Ingrese el resultado 3:')))
 #A1 = numpy.float(A1, dtype=numpy.float64)
 #B=(numpy.array(input('Ingrese la matriz B:')))
 
-def gaussJordan(matriz, vector):
+def gaussJord(matriz, vector):
 
     matrix = numpy.array(matriz, dtype=numpy.float64)
     vector = numpy.array(vector, dtype=numpy.float64)
@@ -27,6 +28,7 @@ def gaussJordan(matriz, vector):
     m = len(vector)
     x = numpy.zeros(m)
 
+#Convierte en cero los registros pertinentes de la matriz:
     for k in range(0, m):
         for r in range(k + 1, m):
             factor = (matrix[r, k] / matrix[k, k])
@@ -49,7 +51,7 @@ def gaussJordan(matriz, vector):
 A=[[A00, A01, A02], [A10, A11, A12], [A20, A21, A22]]
 B=[B1, B2, B3]
 
-#IF DE ORDENAMIENTO
+#Los siguientes Ifs lo que hacen es organizar las filas y los resultados:
 if ((A[0][0]<A[1][0]) or (A[0][0]==A[1][0] and A[0][1]<A[1][1]) or (A[0][0]==A[1][0] and A[0][1]==A[1][1] and A[0][2]<A[1][2])):
     TEMP=A[0]
     TEMP2=B[0]
@@ -58,6 +60,7 @@ if ((A[0][0]<A[1][0]) or (A[0][0]==A[1][0] and A[0][1]<A[1][1]) or (A[0][0]==A[1
     A[1]=TEMP
     B[1]=TEMP2
 
+#Los siguientes Ifs lo que hacen es organizar las filas:
 if ((A[0][0]<A[2][0]) or (A[0][0]==A[2][0] and A[0][1]<A[2][1]) or (A[0][0]==A[2][0] and A[0][1]==A[2][1] and A[0][2]<A[2][2])):
     TEMP=A[0]
     TEMP2=B[0]
@@ -66,6 +69,7 @@ if ((A[0][0]<A[2][0]) or (A[0][0]==A[2][0] and A[0][1]<A[2][1]) or (A[0][0]==A[2
     A[2]=TEMP
     B[2]=TEMP2
 
+#Los siguientes Ifs lo que hacen es organizar las filas:
 if ((A[1][0]<A[2][0]) or (A[1][0]==A[2][0] and A[1][1]<A[2][1]) or (A[1][0]==A[2][0] and A[1][1]==A[2][1] and A[1][2]<A[2][2])):
     TEMP=A[1]
     TEMP2=B[1]
@@ -76,8 +80,9 @@ if ((A[1][0]<A[2][0]) or (A[1][0]==A[2][0] and A[1][1]<A[2][1]) or (A[1][0]==A[2
 
 print(A, ' Y ', B)
 
-TODO=gaussJordan(A, B)
+TODO=gaussJord(A, B)
 
+#Los siguientes Ifs lo que hacen es redondear a partir de la cantidad de cifras significativas ingresadas:
 if (redondeo==1):
     C = ['{:g}'.format(float(('{:.1g}').format(i))) for i in TODO]
 else:
@@ -91,11 +96,12 @@ else:
                 C = ['{:g}'.format(float(('{:.4g}').format(i))) for i in TODO]
             else:
                 C = TODO
-TODO2=gaussJordan(A, B)
+TODO2=gaussJord(A, B)
 D=['{:g}'.format(float(('{:.10g}').format(i))) for i in TODO2]
 print(C)
 print(D)
 
+##A continuación el calculo de los Errores:
 EX=((float(D[0])-float(C[0]))/float((D[0])))
 EY=((float(D[1])-float(C[1]))/float((D[1])))
 EZ=((float(D[2])-float(C[2]))/float((D[2])))
