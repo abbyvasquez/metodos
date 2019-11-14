@@ -46,7 +46,7 @@ def gaussJordan(matriz, vector):
         x[r] = (vector[r] - suma) / matrix[r, r]
     return x
 
-A=[A00, A01, A02], [A10, A11, A12], [A20, A21, A22]
+A=[[A00, A01, A02], [A10, A11, A12], [A20, A21, A22]]
 B=[B1, B2, B3]
 
 #IF DE ORDENAMIENTO
